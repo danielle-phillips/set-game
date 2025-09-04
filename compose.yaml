@@ -1,0 +1,7 @@
+﻿services:
+  set-game:
+    image: set-game
+    build:
+      context: .
+      dockerfile: set-game/Dockerfile
+
