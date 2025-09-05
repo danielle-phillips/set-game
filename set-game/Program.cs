@@ -1,3 +1,5 @@
+using set_game_lib;
+
 namespace set_game;
 
 public class Program
@@ -44,6 +46,14 @@ public class Program
                 return forecast;
             })
             .WithName("GetWeatherForecast")
+            .WithOpenApi();
+
+        app.MapGet("/InitializeGame", (HttpContext httpContext) =>
+            {
+                var gameStateManager = new TraditionalGameStateManager(infiniteMode: true);
+                return gameStateManager.GenerateInitialBoard();
+            })
+            .WithName("GetInitialBoard")
             .WithOpenApi();
 
         app.Run();

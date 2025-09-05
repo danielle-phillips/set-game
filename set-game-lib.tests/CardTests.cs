@@ -77,5 +77,29 @@ public class CardTests
         
             Assert.That(card.GetHashCode(), Is.EqualTo(80));
         }
+        
+        [Test]
+        public void ReverseHashingTest1()
+        {
+            var card = new Card(80);
+        
+            Assert.That(card, Is.EqualTo(new Card([2, 2, 2, 2])));
+        }
+
+        [Test]
+        public void ReverseHashingTest2()
+        {
+            var card = new Card(0);
+        
+            Assert.That(card, Is.EqualTo(new Card([0, 0, 0, 0])));
+        }
+
+        [Test]
+        public void ReverseHashingTest3()
+        {
+            var card = new Card(15);
+        
+            Assert.That(card, Is.EqualTo(new Card([0, 1, 2, 0])));
+        }
     }
 }
