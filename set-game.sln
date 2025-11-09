@@ -8,7 +8,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B976EED1-DAC2-43FB-9766-4DE13F78B4AB}"
 	ProjectSection(SolutionItems) = preProject
 		.dockerignore = .dockerignore
-		..\..\AppData\Local\Temp\Rar$DRa22504.47840.rartemp\2710267-430af16108d1924fefa2e4b55ae1297f9ef474b8\.gitignore = ..\..\AppData\Local\Temp\Rar$DRa22504.47840.rartemp\2710267-430af16108d1924fefa2e4b55ae1297f9ef474b8\.gitignore
 		compose.yaml = compose.yaml
 		Dockerfile = Dockerfile
 	EndProjectSection
