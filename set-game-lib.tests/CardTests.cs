@@ -9,8 +9,8 @@ public class CardTests
         [Test]
         public void CardsAreMarkedUnequal()
         {
-            Card card1 = new(new List<int> { 0, 1, 2, 0 });
-            Card card2 = new(new List<int> { 2, 2, 2, 2 });
+            Card card1 = new(new List<sbyte> { 0, 1, 2, 0 });
+            Card card2 = new(new List<sbyte> { 2, 2, 2, 2 });
         
             Assert.That(card1.Equals(card2), Is.False);
             Assert.That(card1 != card2, Is.True);
@@ -19,8 +19,8 @@ public class CardTests
         [Test]
         public void CardsAreMarkedEqual()
         {
-            Card card1 = new(new List<int> { 1, 1, 1, 1 });
-            Card card2 = new(new List<int> { 1, 1, 1, 1 });
+            Card card1 = new(new List<sbyte> { 1, 1, 1, 1 });
+            Card card2 = new(new List<sbyte> { 1, 1, 1, 1 });
         
             Assert.That(card1.Equals(card2), Is.True);
             Assert.That(card1 == card2, Is.True);
@@ -33,9 +33,9 @@ public class CardTests
         [Test]
         public void SetOperationFindsThirdCard()
         {
-            Card card1 = new(new List<int> { 0, 1, 2, 0 });
-            Card card2 = new(new List<int> { 2, 2, 2, 2 });
-            Card card3 = new(new List<int> { 1, 0, 2, 1 });
+            Card card1 = new(new List<sbyte> { 0, 1, 2, 0 });
+            Card card2 = new(new List<sbyte> { 2, 2, 2, 2 });
+            Card card3 = new(new List<sbyte> { 1, 0, 2, 1 });
         
             Assert.That(card1 * card2, Is.EqualTo(card3));
         }
@@ -43,9 +43,9 @@ public class CardTests
         [Test]
         public void SetOperationFindsOnlyThirdCard()
         {
-            Card card1 = new(new List<int> { 0, 1, 2, 0 });
-            Card card2 = new(new List<int> { 2, 2, 2, 2 });
-            Card card3 = new(new List<int> { 1, 1, 1, 1 });
+            Card card1 = new(new List<sbyte> { 0, 1, 2, 0 });
+            Card card2 = new(new List<sbyte> { 2, 2, 2, 2 });
+            Card card3 = new(new List<sbyte> { 1, 1, 1, 1 });
         
             Assert.That(card1 * card2, !Is.EqualTo(card3));
         }
@@ -57,7 +57,7 @@ public class CardTests
         [Test]
         public void HashingTest1()
         {
-            Card card = new(new List<int> { 0, 1, 2, 0 });
+            Card card = new(new List<sbyte> { 0, 1, 2, 0 });
         
             Assert.That(card.GetHashCode(), Is.EqualTo(15));
         }
@@ -65,7 +65,7 @@ public class CardTests
         [Test]
         public void HashingTest2()
         {
-            Card card = new(new List<int> { 0, 0, 0, 0 });
+            Card card = new(new List<sbyte> { 0, 0, 0, 0 });
         
             Assert.That(card.GetHashCode(), Is.EqualTo(0));
         }
@@ -73,7 +73,7 @@ public class CardTests
         [Test]
         public void HashingTest3()
         {
-            Card card = new(new List<int> { 2, 2, 2, 2 });
+            Card card = new(new List<sbyte> { 2, 2, 2, 2 });
         
             Assert.That(card.GetHashCode(), Is.EqualTo(80));
         }

@@ -65,7 +65,7 @@ public class Card
         return hashedValue;
     }
 
-    protected bool Equals(Card other)
+    private bool Equals(Card other)
     {
         return Attributes.SequenceEqual(other.Attributes);
     }

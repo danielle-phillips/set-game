@@ -23,7 +23,7 @@ public class TraditionalGameStateManager(bool infiniteMode = false) : IGameState
         
         if (infiniteMode)
         {
-            _deck.PlaceCardsBackInDeck(selectedCards);
+            _deck.ReturnCardsToDeck(selectedCards);
         }
         
         return newCards;

@@ -7,7 +7,7 @@ public class Deck
     // All 81 cards in the deck: true if already pulled from deck, false otherwise
     private readonly List<bool> _deck = [..new bool[81]];
 
-    public void PlaceCardsBackInDeck(List<Card> cards)
+    public void ReturnCardsToDeck(List<Card> cards)
     {
         foreach (var card in cards)
         {
